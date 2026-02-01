@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ticoman18K | WhatsApp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#d4af37;
+  --gold-light:#ffe9a6;
+  --gold-dark:#8a620e;
+  --bg:#050505;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at center, rgba(212,175,55,.25), transparent 55%),
+    #000;
+  font-family:Inter, sans-serif;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* partículas douradas */
+body::after{
+  content:"";
+  position:fixed;
+  inset:-50%;
+  background:
+    radial-gradient(circle, rgba(212,175,55,.8) 0 1px, transparent 2px);
+  background-size:28px 28px;
+  opacity:.18;
+  animation: float 18s linear infinite;
+  pointer-events:none;
+}
+@keyframes float{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120px)}
+}
+
+/* moldura externa */
+.frame{
+  width:100%;
+  max-width:720px;
+  padding:18px;
+  border-radius:44px;
+  background:
+    linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold-dark));
+  box-shadow:
+    0 0 60px rgba(212,175,55,.55),
+    0 0 120px rgba(212,175,55,.25);
+}
+
+/* card interno */
+.card{
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg,#111,#070707);
+  border-radius:36px;
+  padding:38px 26px 30px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow: inset 0 0 40px rgba(212,175,55,.12);
+}
+
+/* topo */
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+}
+
+.logo{
+  width:58px;height:58px;
+  border-radius:16px;
+  background:
+    radial-gradient(circle at 30% 20%,#fff,transparent 50%),
+    linear-gradient(135deg,#333,#000);
+  border:1px solid var(--gold);
+  display:grid;
+  place-items:center;
+  box-shadow:0 0 25px rgba(212,175,55,.45);
+}
+
+.logo span{
+  font-family:Cinzel,serif;
+  font-size:34px;
+  background:linear-gradient(180deg,#fff,var(--gold),var(--gold-dark));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+h1{
+  font-family:Cinzel,serif;
+  font-size:44px;
+  margin:0;
+  background:linear-gradient(180deg,#fff,var(--gold),var(--gold-dark));
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 30px rgba(212,175,55,.35);
+}
+
+/* pill */
+.pill{
+  margin:18px auto;
+  width:max-content;
+  padding:12px 20px;
+  border-radius:999px;
+  border:1px solid var(--gold);
+  background:rgba(212,175,55,.15);
+  box-shadow:0 0 25px rgba(212,175,55,.45);
+  font-weight:700;
+}
+
+/* texto */
+.desc{
+  text-align:center;
+  color:#eaeaea;
+  line-height:1.5;
+  margin-bottom:24px;
+}
+
+/* botão whatsapp */
+.wa{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  padding:18px;
+  border-radius:999px;
+  font-size:22px;
+  font-weight:900;
+  color:#eafff0;
+  text-decoration:none;
+  background:
+    linear-gradient(180deg,#3cff87,#1fbf63,#0d8f44);
+  box-shadow:
+    0 0 35px rgba(50,221,115,.6),
+    inset 0 2px 0 rgba(255,255,255,.35);
+  overflow:hidden;
+}
+
+.wa::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:translateX(-120%);
+  animation: shine 3.5s infinite;
+}
+@keyframes shine{
+  0%{transform:translateX(-120%)}
+  60%{transform:translateX(120%)}
+  100%{transform:translateX(120%)}
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin:26px 0 18px;
+}
+
+.box{
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--gold);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.25));
+  box-shadow:0 0 28px rgba(212,175,55,.25);
+  text-align:center;
+  font-weight:800;
+}
+
+.box small{
+  display:block;
+  margin-top:6px;
+  font-weight:400;
+  color:#ddd;
+}
+
+/* footer */
+.footer{
+  text-align:center;
+  margin-top:16px;
+  color:#ddd;
+}
+.footer b{
+  background:linear-gradient(180deg,#fff,var(--gold));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+@media(max-width:520px){
+  h1{font-size:36px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="card">
+
+      <div class="brand">
+        <div class="logo"><span>T</span></div>
+        <h1>Ticoman18K</h1>
+      </div>
+
+      <div class="pill">Atendimento direto no WhatsApp</div>
+
+      <p class="desc">
+        Clique abaixo e fale com a nossa equipe.<br>
+        Atendimento rápido para pedidos, valores, prazos e personalização.
+      </p>
+
+      <a class="wa" href="https://wa.me/5544998787452" target="_blank">
+        💬 Chamar no WhatsApp
+      </a>
+
+      <div class="grid">
+        <div class="box">👜 Modelos <small>catálogo e preços</small></div>
+        <div class="box">✨ Personalizado <small>nome, letra ou foto</small></div>
+        <div class="box">⏳ Prazo <small>envio e pagamento</small></div>
+        <div class="box">✔️ Dúvidas <small>resposta rápida</small></div>
+      </div>
+
+      <div class="footer">
+        © <b>Ticoman18K</b> — brilho e qualidade premium.
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
